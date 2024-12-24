@@ -15,6 +15,7 @@ const sample = (array) => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({});
+    console.log("Deleting old campgrounds...");
     for (let i = 0; i < 50; i++) {
         const randCity = sample(cities);
         const camp = new Campground({
@@ -23,6 +24,7 @@ const seedDB = async () => {
         });
         await camp.save();
     }
+    console.log("Added seed campgrounds");
 }
 
 seedDB().then(() => {
