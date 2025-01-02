@@ -46,11 +46,11 @@
                     <label for="image-<%= i %>">Delete?</label>
                 <% }) %>
             </div>
-            
-            <div class="mb-3">
+            <hr>
+            <div class="mb-3 d-flex justify-content-center gap-3">
                 <button class="btn btn-info">Update Campground</button>
+                <a class="btn btn-warning" href="/campgrounds/<%= campground._id %>">Back To Campground</a>
             </div>
         </form>
-        <a href="/campgrounds/<%= campground._id %>">Back To Campground</a>
     </div>
 </div>
