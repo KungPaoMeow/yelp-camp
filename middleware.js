@@ -63,7 +63,7 @@ module.exports.isReviewAuthor = async (req, res, next) => {
 
 module.exports.validateFiles = (req, res, next) => {
     if (!req.files || req.files.length === 0) {
-        throw new ExpressError('You do not have permission to do that!', 400);   // express calls next(err)
+        throw new ExpressError('You must attach some images!', 400);   // express calls next(err)
     }
     next();
 };
